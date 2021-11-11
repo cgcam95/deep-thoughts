@@ -10,7 +10,7 @@ class AuthService {
     loggedIn() {
       // Checks if there is a saved token and it's still valid
       const token = this.getToken();
-      // use type coersion to check if token is NOT undefined and the token is NOT expired
+      // type coersion to check if token is NOT undefined and the token is NOT expired
       return !!token && !this.isTokenExpired(token);
     }
   
@@ -34,7 +34,7 @@ class AuthService {
       return localStorage.getItem('id_token');
     }
   
-    // set token to localStorage and reload page to homepage
+    // token to localStorage and reload page to homepage
     login(idToken) {
       // Saves user token to localStorage
       localStorage.setItem('id_token', idToken);
